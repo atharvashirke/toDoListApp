@@ -1,0 +1,34 @@
+.checked {
+	text-decoration: line-through;
+	color: grey;
+}
+
+.board {
+	text-align: center;
+	max-width: 768px;
+	background-color: white;
+}
+
+.heading {
+	background-color: #98FF98;
+}
+
+input {
+	width: 768px;
+	font-size: 3rem;
+	border: 0;
+	background-color: #F5F5F5;
+}
+
+#taskList {
+	text-align: left;
+	font-size: 3rem;
+}
+
+.grey {
+	background-color: #F5F5F5;
+}
+
+body {
+	background-color: black;
+}
