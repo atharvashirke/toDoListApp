@@ -1,34 +1,79 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background: #00d2ff;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#container {
+	box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+	width: 360px;
+	margin: 100px auto;
+	background: #f7f7f7;
+}
+
 .checked {
 	text-decoration: line-through;
 	color: grey;
 }
 
-.board {
-	text-align: center;
-	max-width: 768px;
-	background-color: white;
+h1 {
+	background-color: #81b69d;
+	color: white;
+	padding: 10px 20px;
+	font-weight: normal;
+	font-size: 24px;
+	margin-bottom: 0;
 }
 
-.heading {
-	background-color: #98FF98;
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	background-color: #fff;
+	height: 40px;
+	line-height: 40px;
+	color: #666;
 }
 
 input {
-	width: 768px;
-	font-size: 3rem;
-	border: 0;
-	background-color: #F5F5F5;
+	background-color: #f7f7f7;
+	border: 2px solid rgba(0,0,0,0);
+	width: 100%;
+	font-size: 18px;
+	padding: 13px 13px 13px 20px;
+	box-sizing: border-box;
 }
 
-#taskList {
-	text-align: left;
-	font-size: 3rem;
+input:focus {
+	background-color: #fff;
+	border: 2px solid #81b69d;
+	outline: none;
 }
 
-.grey {
-	background-color: #F5F5F5;
+li:nth-child(2n) {
+	background-color: #f7f7f7;
 }
 
-body {
-	background-color: black;
+.trash {
+	background-color: #e74c3c;
+	color: white;
+	width: 0;
+	height: 40px;
+	margin-right: 20px;
+	text-align: center;
+	display: inline-block;
+	transition: 0.2s linear;
+}
+
+li:hover .trash {
+	width: 40px;
+}
+
+.fa-pencil-ruler {
+	float: right;
 }

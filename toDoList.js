@@ -1,23 +1,25 @@
-var counter = 0
+// Deletes task when delete icon is clicked
+$("ul").on("click", ".trash", function(event) {
+	$(this).parent().fadeOut(function() {
+		$(this).remove()
+	})
+	event.stopPropagation()
+})
 
-$("input").on("keypress", function(event) {
-	if (event.which === 13) {
-		createTask($(this).val())
-		$(this).val("")
-		if (counter % 2 != 0) {
-			$(".task").first().addClass("grey")
-		}
-		counter++;
+// Checks off task when clicked
+$("ul").on("click", "li", function() {
+	$(this).toggleClass("checked")
+})
+
+// Adds a new todo after user hits enter
+$(document).on("keypress", function(event) {
+	if (event.which == 13) {
+		$('ul').prepend('<li><span class="trash"><i class="fas fa-trash"></i></span> ' + $('input').val() + "</li>")
+		$('input').val("")
 	}
 })
 
-function createTask(task) {
-	$("#taskList").html('<p class="task">' + task + '</p>' + $("#taskList").html())
-	$(".task").on("click", function() {
-		console.log("detected click")
-		$(this).toggleClass("checked")
-	})
-}
-
-
-
+// Toggles input box
+$('.fa-pencil-ruler').on('click', function() {
+	$('input').fadeToggle()
+})
